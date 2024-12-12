@@ -7,20 +7,13 @@ var data = window.location.href.substring(8);
   var subdata = window.location.href.substring(index);
 var data2 = "intent://https/#Intent;scheme="+data+";package=th.go.cgd.iHealthCare.dev;end";
 var data3 ="intent://pocthaid/#Intent;scheme=auth"+subdata+";package=th.go.cgd.iHealthCare.dev;end";
-function docWrite(variable) {
-    document.write(variable);
-}
-var gimmeCats = () => {
-window.location.href = docWrite(data3);
-}
+
 
 function cmd() {
-        window.location.href = docWrite(data3); // I'm using example but you can use google.
+        window.location.href = `intent://pocthaid/#Intent;scheme=auth${subdata};package=th.go.cgd.iHealthCare.dev;end`
     }
 
-var gimmeCats2 = () => {
-  return window.location.href.substring(4);
-}
+
 
 
 </script>
@@ -33,23 +26,7 @@ document.getElementById("demo").innerHTML =
 "The full URL of this page is:<br>" + window.location.href;
 </script>
 <p>
-  <p>
-<button id="catBtn" onclick="cmd()">Click Me!</button>
-<p><p>
-<a id="myLink" href="#" onclick="gimmeCats2()">link text</a>
-<p><p>
-<a id="myLink2" href="#" onclick="gimmeCats()">link text2</a>
-  <p>
-      <p>
-<a id="myLink3" href='javascript:gimmeCats();'>link text3</a>
-<p>
-<p>
-<script>docWrite(data2)</script>
-<p>
-<p>
-<script>docWrite(data3)</script>
-    
-    
+<a id="myLink4" href="#" onclick="cmd();return false;">link text4</a>
 
 </body>
 </html>
