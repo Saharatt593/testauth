@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <script type="text/javascript">
-var data = window.location.href.substring(8);
+ <script type="text/javascript">
   var index = window.location.href.indexOf("?");
   var subdata = window.location.href.substring(index);
-var data2 = "intent://https/#Intent;scheme="+data+";package=th.go.cgd.iHealthCare.dev;end";
-var data3 ="intent://pocthaid/#Intent;scheme=auth"+subdata+";package=th.go.cgd.iHealthCare.dev;end";
-
 
 function cmd() {
-        window.location.href = `intent://pocthaid/#Intent;scheme=auth${subdata};package=th.go.cgd.iHealthCare.dev;end`
+        window.location.href = `pocthaid://auth${subdata}`
     }
-
-
-
-
 </script>
 <p>
 <p id="demo"></p>
 <p>
+  <p>
 <p>
 <script>
 document.getElementById("demo").innerHTML = 
 "The full URL of this page is:<br>" + window.location.href;
 </script>
 <p>
-<a id="myLink4" href="#" onclick="cmd();return false;">link text4</a>
+  ยืนยันการใช้งานเรียบร้อย
+<p>
+<a id="myLink4" href="#" onclick="cmd();return false;">กดเพื่อเข้าสู่ระบบ</a>
 
 </body>
 </html>
